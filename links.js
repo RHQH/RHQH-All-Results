@@ -19,9 +19,9 @@ window.LINKS = {
   "n": 150000
  },
  "mgmt-baqarah": {
-  "s": "jT4MuEQUXO2GrJ9JenSRqg==",
-  "iv": "eszvG9MvhgWUHJ0f",
-  "d": "y8LRicHK4lcoaFahe1RWxCTV1YgobjZESXE1d+SjvHQTuwSK4kjYidk0zmKZjOpMgQTinJ/yAKMCWLtAxFoSuSUW97oJAFFSoozP1x5cJsd7CO79hWchXN1pjlRrG+T1c1gIpaakheIyP4L6GSGf7g40jkT/dzoDVBeViX/gL2Y=",
+  "s": "atONEOmwwMOtiedn0OgZlQ==",
+  "iv": "UeqiYuBvv0NRRq3f",
+  "d": "np+X8LEXZAgZIGDmnSjZ9h6lPKfRiuEsfCWIktMDLrqYImEiHkgrBsEVd+Xuk7Ivc+YlGRbezSUYcrRuDr2PQp99kwyvWGrHcfzdxmeHkX4XDHkZT2eMXBkyBdp6wvGuc8pl47NG5bNE0ckRTI36h3Nmskb6++z1S/z1tkL67po=",
   "n": 150000
  },
  "mgmt-weekly": {
