@@ -42,6 +42,7 @@
 <div class="modal" id="pw"><div>
   <h3 id="pwTitle"></h3><p class="sub" id="pwSub"></p>
   <input id="pwIn" type="password" placeholder="Password" autocomplete="off">
+  <label class="chk"><input id="pwShow" type="checkbox"> Show password</label>
   <label class="chk"><input id="pwKeep" type="checkbox"> Remember on this device</label>
   <div class="err" id="pwErr"></div>
   <div class="row"><button class="cancel" id="pwNo">Cancel</button><button class="ok" id="pwYes">Open</button></div>
@@ -56,7 +57,7 @@ const SECTIONS = [
   { title: 'Surah Baqarah Batch 3', items: [ { id: 'baq3-weekly', label: 'Weekly Test Link' }, { id: 'baq3-ruba', label: 'Ruba Test Link' } ] },
   { title: 'Surah Kahaf Batch 3',   items: [ { id: 'kah3-weekly', label: 'Weekly Test Link' }, { id: 'kah3-ruba', label: 'Ruba Test Link' } ] },
   { title: 'Surah Kahaf Batch 2',   items: [ { id: 'kah2-weekly', label: 'Weekly Test Link' }, { id: 'kah2-ruba', label: 'Ruba Test Link' } ] },
-  { title: 'Management',            items: [ { id: 'mgmt-baqarah', label: 'Surah Baqarah Management' }, { id: 'mgmt-kahaf', label: 'Student Weekly Result' } ] },
+  { title: 'Management',            items: [ { id: 'mgmt-baqarah', label: 'Surah Baqarah Management' }, { id: 'mgmt-kahaf', label: 'Surah Kahaf Management' }, { id: 'mgmt-weekly', label: 'Student Weekly Result' } ] },
 ];
 
 const $ = id => document.getElementById(id);
@@ -87,7 +88,7 @@ $('list').onclick = async e => {
   const kept = read('rq_pw_' + CUR);
   if (kept) { try { return go(await unlock(LINKS[CUR], kept)); } catch (err) { save('rq_pw_' + CUR, null); } }
   $('pwTitle').textContent = b.dataset.label; $('pwSub').textContent = b.dataset.batch;
-  $('pwIn').value = ''; $('pwErr').textContent = ''; $('pwKeep').checked = false;
+  $('pwIn').value = ''; $('pwErr').textContent = ''; $('pwKeep').checked = false; $('pwShow').checked = false; $('pwIn').type = 'password';
   $('pw').classList.add('on'); $('pwIn').focus();
 };
 async function tryOpen() {
@@ -100,6 +101,7 @@ async function tryOpen() {
   } catch (err) { $('pwErr').textContent = 'Wrong password.'; $('pwIn').select(); }
   finally { $('pwYes').disabled = false; }
 }
+$('pwShow').onchange = () => { $('pwIn').type = $('pwShow').checked ? 'text' : 'password'; };
 $('pwYes').onclick = tryOpen;
 $('pwIn').onkeydown = e => { if (e.key === 'Enter') tryOpen(); };
 $('pwNo').onclick = () => $('pw').classList.remove('on');
