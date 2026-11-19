@@ -1,4 +1,4 @@
-// Made with setup.html on 2026-11-18 - links are locked with their passwords.
+// Made with setup.html on 2026-11-19 - links are locked with their passwords.
 window.LINKS = {
  "baq4-weekly": {
   "s": "14DKm7jjXNOpydjqcCilMw==",
@@ -19,9 +19,9 @@ window.LINKS = {
   "n": 150000
  },
  "mgmt-baqarah": {
-  "s": "atONEOmwwMOtiedn0OgZlQ==",
-  "iv": "UeqiYuBvv0NRRq3f",
-  "d": "np+X8LEXZAgZIGDmnSjZ9h6lPKfRiuEsfCWIktMDLrqYImEiHkgrBsEVd+Xuk7Ivc+YlGRbezSUYcrRuDr2PQp99kwyvWGrHcfzdxmeHkX4XDHkZT2eMXBkyBdp6wvGuc8pl47NG5bNE0ckRTI36h3Nmskb6++z1S/z1tkL67po=",
+  "s": "cW0KMzaC6/cChgLjPaIfGQ==",
+  "iv": "Wn7Aysrry6RyKLNZ",
+  "d": "oK3pDKbVvZdX90eykjBRE4yq7sqmLKfm6vux5EU+QVC63YPaBPu7bXYyWdzau2waSlkd69HTYyhzdcika+LePRIo3H8L3PpIkDApT2HpfkZX0yuOdTRYi7P1GIujCIheDuPOCowws9pX0LWCKjEiEE0aEge7UU27R4sqM6tKv/Q=",
   "n": 150000
  },
  "mgmt-weekly": {
