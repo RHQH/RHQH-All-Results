@@ -41,7 +41,7 @@
 
 <div class="modal" id="pw"><div>
   <h3 id="pwTitle"></h3><p class="sub" id="pwSub"></p>
-  <input id="pwIn" type="password" placeholder="Password" autocomplete="off">
+  <input id="pwIn" type="password" placeholder="Password" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">
   <label class="chk"><input id="pwShow" type="checkbox"> Show password</label>
   <label class="chk"><input id="pwKeep" type="checkbox"> Remember on this device</label>
   <div class="err" id="pwErr"></div>
@@ -49,7 +49,7 @@
 </div></div>
 
 <!-- the links, locked with their passwords (made with setup.html) -->
-<script src="links.js"></script>
+<script>document.write('<script src="links.js?v=' + Date.now() + '"><\/script>');</script>
 <script>
 /* The buttons. The id must be the same as in setup.html. */
 const SECTIONS = [
@@ -98,7 +98,7 @@ async function tryOpen() {
     const url = await unlock(LINKS[CUR], p);
     if ($('pwKeep').checked) save('rq_pw_' + CUR, p.trim());
     $('pw').classList.remove('on'); go(url);
-  } catch (err) { $('pwErr').textContent = 'Wrong password.'; $('pwIn').select(); }
+  } catch (err) { $('pwErr').textContent = (err && err.name === 'OperationError') ? 'Wrong password (or links.js was made with a different password).' : 'Error: ' + (err && err.message || err) + (window.crypto && crypto.subtle ? '' : ' - open the page over https.'); $('pwIn').select(); }
   finally { $('pwYes').disabled = false; }
 }
 $('pwShow').onchange = () => { $('pwIn').type = $('pwShow').checked ? 'text' : 'password'; };
