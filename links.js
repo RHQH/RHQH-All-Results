@@ -1,4 +1,4 @@
-// Made with setup.html on 2026-11-19 - links are locked with their passwords.
+// Made with setup.html on 2026-11-25 - links are locked with their passwords.
 window.LINKS = {
  "baq4-weekly": {
   "s": "14DKm7jjXNOpydjqcCilMw==",
@@ -28,6 +28,12 @@ window.LINKS = {
   "s": "sUROyYx1Y0JlEC9WFRTyAg==",
   "iv": "jgSewnVq1n9UThEu",
   "d": "rVtMR8q8XmSk7fX+PhdnFQIYoTcOSvPQn12hcgv35sIhtwjGzKLxRLS9WbhGumg5P0yvQFT+7gsai6ToeBb4CGV1fbzipCQR+51L+XvZRnFsrR+hOJYlm7qlCOOkWlxy8n76dvDHyrVAeCkEuRZnLJIfskEIwnp6yLzDzYoLJilNjHAUrwR36Quh3w==",
+  "n": 150000
+ },
+ "mgmt-kahaf": {
+  "s": "Qm5TGq+hGCIDM2Z367BRCA==",
+  "iv": "8LVmi7i459EP5eim",
+  "d": "ZedkvORd+d9h60IiUcuiSummyQ0JWu1gT1DFHzI94IGT1ChDqEuaDDSji7WCVvXrF5KG+Km2MK8wdSzqJXNZo/vlHl7taOxZTr95GOFn+skXCTPdCxGHFPxzxc4iRbatM/5LvOYZQ26NiB2y7wmJx+1UQ0KGwMAbGRt902WtsKHaGA==",
   "n": 150000
  }
 };
